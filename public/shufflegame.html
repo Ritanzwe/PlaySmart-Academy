@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Scramble Game</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding: 20px;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+        }
+
+        .container {
+            max-width: 600px;
+        }
+
+        .card {
+            border: none;
+            border-radius: 15px;
+            background-color: #ffffff;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: #007bff;
+            margin-bottom: 30px;
+        }
+
+        #scrambleWord {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        input[type="text"] {
+            text-align: center;
+            font-size: 1.5rem;
+            padding: 15px;
+            width: 100%;
+            border: 2px solid #007bff;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        button {
+            font-size: 1.5rem;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #007bff;
+            color: white;
+        }
+
+        #result {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #333;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="card">
+            <h1>Word Scramble Game</h1>
+            <div id="scrambleWord"></div>
+            <input type="text" id="inputWord" placeholder="Enter your guess">
+            <button onclick="checkWord()" id="playButton" class="btn btn-primary">Check</button>
+            <button onclick="resetGame()" id="replayButton" class="btn btn-secondary" style="display: none;">Play Again</button>
+            <p id="result"></p>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Custom JavaScript -->
+     <script src="/javascripts/shuffle.js"></script>
+</body>
+</html>
